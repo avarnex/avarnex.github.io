@@ -1,0 +1,82 @@
+:root {
+    --bg-color: #101010;
+    --fg-color: #151515;
+    --text-color: #E9E8E8;
+    --accent-color: #5A4FCF;
+    --accent-gradient: linear-gradient(30deg, #5A4FCF, #B14ECF);
+}
+
+@font-face {
+  font-family: ArchivoBlack-Regular;
+  src: url("fonts/ArchivoBlack-Regular.ttf");
+}
+
+@font-face {
+  font-family: Anonymous-Pro;
+  src: url("fonts/Anonymous Pro.ttf");
+}
+
+body {
+    margin: 0px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: Anonymous-Pro;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: ArchivoBlack-Regular;
+  margin: 0px;
+}
+
+.highlight {
+  background: var(--accent-color);
+  color: var(--bg-color);
+  padding: 2px;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  transition-duration: 0.2s;
+}
+
+a:hover {
+  color: var(--bg-color);
+  background: var(--accent-color);
+}
+
+div.header {
+    width: 100%;
+    overflow: hidden;
+    background: var(--accent-gradient);
+}
+
+section.about {
+    margin: auto;
+    max-width: 700px;
+    text-align: left;
+    padding: 2em;
+}
+
+section.contacts {
+  margin: auto;
+  max-width: 700px;
+  padding: 1em;
+}
+
+div.card {
+  max-width: 500px;
+  padding: 10px;
+
+  background: var(--fg-color);
+  border: solid 2px var(--fg-color);
+  border-radius: 10px;
+  transition-duration: 0.5s;
+
+  font-size: 22px; 
+}
+
+div.card:hover {
+  border-color: var(--accent-color);
+}
