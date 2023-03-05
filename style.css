@@ -80,3 +80,18 @@ div.card {
 div.card:hover {
   border-color: var(--accent-color);
 }
+
+svg {
+  animation: animate 20s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(-1000px);
+  }
+  1000% {
+    transform: translate(1000px);
+  }
+}
