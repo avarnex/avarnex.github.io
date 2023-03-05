@@ -23,6 +23,8 @@ body {
     font-family: Anonymous-Pro;
 }
 
+/* Text */
+
 h1, h2, h3, h4, h5 {
   font-family: ArchivoBlack-Regular;
   margin: 0px;
@@ -46,28 +48,26 @@ a:hover {
   background: var(--accent-color);
 }
 
+/* Sections */
+
 div.header {
     width: 100%;
     overflow: hidden;
     background: var(--accent-gradient);
 }
 
-section.about {
-    margin: auto;
-    max-width: 700px;
-    text-align: left;
-    padding: 2em;
-}
-
-section.contacts {
-  margin: auto;
+div.content {
+  margin: 1em auto;
   max-width: 700px;
   padding: 1em;
 }
 
+/* Cards */
+
 div.card {
   max-width: 500px;
   padding: 10px;
+  margin: 10px 0;
 
   background: var(--fg-color);
   border: solid 2px var(--fg-color);
