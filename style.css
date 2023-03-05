@@ -7,26 +7,20 @@
 }
 
 @font-face {
-  font-family: ArchivoBlack-Regular;
-  src: url("fonts/ArchivoBlack-Regular.ttf");
-}
-
-@font-face {
-  font-family: Anonymous-Pro;
-  src: url("fonts/Anonymous Pro.ttf");
+  font-family: Manrope;
+  src: url("fonts/manrope-bold.otf");
 }
 
 body {
     margin: 0px;
     background: var(--bg-color);
     color: var(--text-color);
-    font-family: Anonymous-Pro;
+    font-family: Manrope;
 }
 
 /* Text */
 
 h1, h2, h3, h4, h5 {
-  font-family: ArchivoBlack-Regular;
   margin: 0px;
 }
 
