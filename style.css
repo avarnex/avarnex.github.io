@@ -1,9 +1,10 @@
 :root {
-    --bg-color: #101010;
-    --fg-color: #151515;
-    --text-color: #E9E8E8;
+    --bg-color: #100C08;
+    --fg-color: #171717;
+    --text-color: #EFF3F7;
     --accent-color: #5A4FCF;
     --accent-gradient: linear-gradient(30deg, #5A4FCF, #B14ECF);
+    --transition-time: 0.5s;
 }
 
 @font-face {
@@ -16,25 +17,26 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
     font-family: Manrope;
+    font-size: 2.5vh;
 }
 
 /* Text */
+
+* {
+  transition-duration: var(--transition-time);
+}
 
 h1, h2, h3, h4, h5 {
   margin: 0px;
 }
 
 .highlight {
-  background: var(--accent-color);
-  color: var(--bg-color);
-  padding: 2px;
-  font-weight: bold;
+  color: var(--accent-color);
 }
 
 a {
   text-decoration: none;
   color: var(--accent-color);
-  transition-duration: 0.2s;
 }
 
 a:hover {
@@ -52,7 +54,7 @@ div.header {
 
 div.content {
   margin: 1em auto;
-  max-width: 700px;
+  max-width: 500px;
   padding: 1em;
 }
 
@@ -61,31 +63,13 @@ div.content {
 div.card {
   max-width: 500px;
   padding: 10px;
-  margin: 10px 0;
+  margin: 5px 0;
 
   background: var(--fg-color);
   border: solid 2px var(--fg-color);
-  border-radius: 10px;
-  transition-duration: 0.5s;
-
-  font-size: 22px; 
+  border-radius: 15px;
 }
 
 div.card:hover {
   border-color: var(--accent-color);
-}
-
-svg {
-  animation: animate 20s linear infinite;
-}
-@keyframes animate {
-  0% {
-    transform: translate(0px);
-  }
-  50% {
-    transform: translate(-1000px);
-  }
-  1000% {
-    transform: translate(1000px);
-  }
 }
