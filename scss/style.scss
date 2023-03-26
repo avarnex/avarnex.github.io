@@ -1,0 +1,109 @@
+$bg-color: #080708;
+$fg-color: #252525;
+$font-color: #ffffff;
+$accent-color: #5a4fcf;
+
+@mixin card-highlight {
+  border: solid 2px $fg-color;
+  border-radius: 20px;
+  transition: 0.3s ease-out;
+
+  &:hover {
+    border-color: $accent-color;
+    border-radius: 15px;
+    box-shadow: 0 0 2em $accent-color;
+    transform: translateY(-5px);
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url("fonts/manrope-medium.otf");
+}
+
+body {
+  background: $bg-color;
+  color: $font-color;
+  margin: 0px;
+  font-family: Manrope;
+  font-size: clamp(1rem, 0.9rem + 0.45vw, 1.5rem);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  font-weight: bold;
+}
+
+p {
+  margin: 0px;
+}
+
+.highlight {
+  color: $accent-color;
+  text-shadow: 0 0 1em $accent-color;
+}
+
+a {
+  text-decoration: none;
+  color: $font-color;
+}
+
+/* Sections */
+
+div.wrapper {
+  display: grid;
+  justify-content: center;
+}
+
+div.header {
+  background: $accent-color;
+  width: 100%;
+  overflow: hidden;
+}
+
+div.content {
+  max-width: 600px;
+  padding: 1em;
+}
+
+/* Cards */
+
+div.small-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  background: $bg-color;
+
+  div.small-card {
+    @include card-highlight;
+
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+div.big-card {
+  @include card-highlight;
+
+  background: $bg-color;
+  padding: 20px;
+
+  ul {
+    margin: 0px;
+    padding: 0px;
+
+    li {
+      list-style-type: "-";
+      padding-inline-start: 5px;
+    }
+  }
+}
