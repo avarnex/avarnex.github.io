@@ -3,9 +3,10 @@
   src: url("fonts/manrope-medium.otf");
 }
 body {
-  background: #080708;
-  color: #ffffff;
-  margin: 0px;
+  background-color: #080708;
+  color: #EEEEEE;
+  margin: 0;
+  box-sizing: border-box;
   font-family: Manrope;
   font-size: clamp(1rem, 0.9rem + 0.45vw, 1.5rem);
 }
@@ -16,50 +17,51 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0px;
+  margin: 0;
   font-weight: bold;
 }
 
 p {
-  margin: 0px;
+  margin: 0;
 }
 
 .highlight {
   color: #5a4fcf;
-  text-shadow: 0 0 1em #5a4fcf;
 }
 
 a {
-  text-decoration: none;
-  color: #ffffff;
+  text-decoration: underline;
+  color: #EEEEEE;
 }
 
-/* Sections */
-div.wrapper {
+svg {
+  display: block;
+  margin: 0 auto;
+}
+
+main {
   display: grid;
   justify-content: center;
 }
 
-div.header {
-  background: #5a4fcf;
+header {
+  background-color: #5a4fcf;
   width: 100%;
   overflow: hidden;
 }
 
-div.content {
+section {
   max-width: 600px;
   padding: 1em;
 }
 
-/* Cards */
 div.small-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 10px;
-  background: #080708;
 }
 div.small-cards div.small-card {
-  border: solid 2px #252525;
+  border: 2px solid #252525;
   border-radius: 20px;
   transition: 0.3s ease-out;
   padding: 10px;
@@ -71,15 +73,14 @@ div.small-cards div.small-card:hover {
   box-shadow: 0 0 2em #5a4fcf;
   transform: translateY(-5px);
 }
-div.small-cards div.small-card a {
-  text-decoration: underline;
+div.small-cards a {
+  text-decoration: none;
 }
 
 div.big-card {
-  border: solid 2px #252525;
+  border: 2px solid #252525;
   border-radius: 20px;
   transition: 0.3s ease-out;
-  background: #080708;
   padding: 20px;
 }
 div.big-card:hover {
@@ -88,12 +89,9 @@ div.big-card:hover {
   box-shadow: 0 0 2em #5a4fcf;
   transform: translateY(-5px);
 }
-div.big-card a {
-  text-decoration: underline;
-}
 div.big-card ul {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 div.big-card ul li {
   list-style-type: "-";

@@ -1,10 +1,12 @@
-$bg-color: #080708;
-$fg-color: #252525;
-$font-color: #ffffff;
+// Variables
+$background-color: #080708;
+$foreground-color: #252525;
+$font-color: #EEEEEE;
 $accent-color: #5a4fcf;
 
+// Mixins
 @mixin card-highlight {
-  border: solid 2px $fg-color;
+  border: 2px solid $foreground-color;
   border-radius: 20px;
   transition: 0.3s ease-out;
 
@@ -14,21 +16,20 @@ $accent-color: #5a4fcf;
     box-shadow: 0 0 2em $accent-color;
     transform: translateY(-5px);
   }
-
-  a {
-    text-decoration: underline;
-  }
 }
 
+// Font
 @font-face {
   font-family: Manrope;
   src: url("fonts/manrope-medium.otf");
 }
 
+// Global styles
 body {
-  background: $bg-color;
+  background-color: $background-color;
   color: $font-color;
-  margin: 0px;
+  margin: 0;
+  box-sizing: border-box;
   font-family: Manrope;
   font-size: clamp(1rem, 0.9rem + 0.45vw, 1.5rem);
 }
@@ -39,67 +40,69 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0px;
+  margin: 0;
   font-weight: bold;
 }
 
 p {
-  margin: 0px;
+  margin: 0;
 }
 
 .highlight {
   color: $accent-color;
-  text-shadow: 0 0 1em $accent-color;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   color: $font-color;
 }
 
-/* Sections */
+svg {
+  display: block;
+  margin: 0 auto;
+}
 
-div.wrapper {
+// Sections
+main {
   display: grid;
   justify-content: center;
 }
 
-div.header {
-  background: $accent-color;
+header {
+  background-color: $accent-color;
   width: 100%;
   overflow: hidden;
 }
 
-div.content {
+section {
   max-width: 600px;
   padding: 1em;
 }
 
-/* Cards */
-
+// Cards
 div.small-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 10px;
-  background: $bg-color;
 
   div.small-card {
     @include card-highlight;
-
     padding: 10px;
     text-align: center;
+  }
+  
+  a {
+    text-decoration: none;
   }
 }
 
 div.big-card {
   @include card-highlight;
-
-  background: $bg-color;
   padding: 20px;
 
   ul {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 
     li {
       list-style-type: "-";
